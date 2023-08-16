@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatWebApp</title>
+    <!-- connecting socket.io js file -->
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <main>
+        <h1>ChatWebApp</h1>
+        <div class="chatBox">
+            <div id="chats">
+                <!-- <div class="userJoined">
+                    <span>Gaurav Mishra joined</span>
+                </div>
+                <div class="another user" username="antshant">
+                    <div id="usermsg">
+                        <div id="details">
+                            <p id="name">Someone</p>
+                            <p id="time">10:00</p>
+                        </div>
+                        <div id="message">
+                            <p>Hi</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="self user" username="self">
+                    <div id="usermsg">
+                        <div id="details">
+                            <p id="name">Self</p>
+                            <p id="time">10:00</p>
+                        </div>
+                        <div id="message">
+                            <p>Hello</p>
+                        </div> 
+                    </div>
+                </div> -->
+            </div>
+            <form id="formBox">
+                <input type="text" placeholder="Type a message" id="inputBox"/>
+                <button type="submit" id="sendBtn">Send</button>
+            </form>
+            
+        </div>
+    </main>
+</body>
+<script defer type="text/javascript" src="./script.js"></script>
+</html>

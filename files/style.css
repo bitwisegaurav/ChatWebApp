@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #f1f1f1;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+main{
+    width: 80vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    font-size: 30px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chatBox{
+    position: relative;
+    /* width: 100%; */
+    width: 800px;
+    height: calc(100% - 60px);
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 5px #ccc;
+    border-radius: 5px;
+}
+
+.chatBox form{
+    position:sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 -10px 15px #fff;
+    /* border: 2px solid red; */
+}
+.chatBox form input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+.chatBox form button{
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+}
+.chatBox form button:hover{
+    background-color: #444;
+}
+.chatBox form button:active{
+    background-color: #555;
+}
+.chatBox form button:focus{
+    background-color: #555;
+}
+
+#chats{
+    padding: 1rem 2rem;
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+}
+
+#chats::-webkit-scrollbar{
+    width: 2px;
+}
+#chats::-webkit-scrollbar-thumb{
+    background-color: #333;
+    border-radius: 5%;
+}
+#chats::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+
+#chats .userJoined{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+#chats .userJoined span{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.541);
+    width: 80%;
+    font-size: small;
+    padding: 5px 0;
+    border-radius: 10px;
+    margin-right: 10px;
+    background-color: rgba(159, 180, 251, 0.484);
+}
+
+#chats .user{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+#chats .usermsg{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    border-radius: 5px;
+    font-size: small;
+}
+#chats .usermsg .details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-size: smaller;
+}
+#chats .usermsg .details .name{
+    color: #5670c6;
+}
+#chats .usermsg .details .time{
+    color: rgb(5, 156, 61);
+}
+#chats .usermsg #message{
+    width: 100%;
+    font-size: 16px;
+}
+#chats .self {
+    justify-content: flex-end;
+}
+#chats .self .usermsg{
+    background-color: #003cffab;
+    color: #fff;
+}
+#chats .self .usermsg .details .name{
+    color: #c2cae3;
+}
+#chats .self .usermsg .details .time{
+    color: rgb(159, 251, 193);
+}
