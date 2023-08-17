@@ -7,7 +7,7 @@ const server = http.createServer(app);
 const io = socketIo(server);
 const users = {};
 
-app.use(express.static("files"));
+app.use(express.static("public"));
 
 io.on("connection", (socket) => {
   socket.on("new-user", (name) => {
